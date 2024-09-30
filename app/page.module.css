@@ -1,0 +1,353 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  /* display: grid; */
+  /* grid-template-rows: 20px 1fr 20px; */
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  /* padding: 80px; */
+  /* gap: 64px; */
+  font-family: var(--font-geist-sans);
+}
+
+
+/* .main{
+  margin-top: 10rem;
+
+} */
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  
+  .h1{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    position: relative;
+  }
+  .h1::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -32%;
+    /* color: red; */
+    background-color: #E4E6EC;
+    width: 30%;
+    height: 2px;
+
+  }
+  .h1::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -32%;
+    /* color: red; */
+    background-color: #E4E6EC;
+    width: 30%;
+    height: 2px;
+
+  }
+
+  .hero{
+    /* padding: 0 4rem; */
+    background-image: url('../public/images/backgrounds/fyzman-bg-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: bisque; */
+  }
+
+  .heroContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroLinksWithImgs{
+    display: flex;
+    gap: var(--gap);
+    /* background-color: aqua; */
+    width: 100%;
+  }
+
+  .heroLeft{
+    background-image: url('https://fyzicalchicago.com/wp-content/uploads/2021/07/fyzical-lincoln-park-front-desk-1193x800.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1;
+
+    position: relative;
+    /* min-width: 37rem; */
+    width: 100%;
+    /* background-color: #1a1a1a; */
+    
+  }
+
+  .heroCTA{
+    background-color: white;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+
+  }
+
+  .heroCTA span{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .heroCTA a{
+    background-color: var(--main-color);
+    color: white;
+    padding: .5rem .8rem;
+    border-radius: 10rem;
+    text-align: center;
+    width: 9rem;
+  }
+  .heroRight{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 1/1;
+    /* min-width: 37rem; */
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    /* flex-wrap: wrap; */
+    gap: var(--gap);
+  }
+
+  .heroNav{
+    background-color: rgb(140, 131, 148);
+    /* aspect-ratio: 1.1; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroNav img{
+    /* object-fit: cover;
+    object-position: center; */
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    width: 27rem;
+  }
+
+
+  .services{
+    background-image: url('../public/images/backgrounds/fyzical-bg-2-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .servicesCards{
+    display: grid;
+    gap: var(--gap);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* width: 100%; */
+    min-height: 40rem;
+    /* background-color: #1a1a1a; */
+  }
+
+  .servicesCard{
+    background-color: rgb(255, 255, 255);
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+
+  
+
+  .servicesCard:hover .servicesCardHeader h4::after{
+    width: 100%;
+    background-color: #8f8f8f;
+
+  }
+
+  .servicesCardHeader{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #ccc; */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    /* justify-content: center; */
+  }
+  .servicesCardHeader img{
+    width: 5.5rem;
+  }
+
+  .servicesCardHeader h4{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #383838;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 2px solid #b7b7b7; */
+  }
+  .servicesCardHeader h4::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 7rem;
+    background-color: #c1c1c1;
+    bottom: -.6rem;
+    transition: var(--transition);
+    /* left: 0;
+    right: 0; */
+
+  }
+
+  .servicesCardBody{
+    /* background-color: #383838; */
+    padding: 0 1rem;
+    text-align: center;
+    /* display: flex; */
+  }
+
+  .servicesCardBody p{
+    font-size: .95rem;
+    color: #515151;
+
+  }
+
+  .appointment{
+    background-image: url('https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicago-physical-therapy-1200x800.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 33rem;
+    display: flex;
+    flex-direction: row;
+    /* position: relative; */
+  }
+
+  .appointment > div{
+    /* background-color: rgb(167, 149, 185); */
+    width: calc(var(--width)/2);
+    min-height: 10rem;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+  
+  }
+
+  .appointmentContainer{
+    background-color: #2A4061;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    width: 25rem;
+    color: white;
+    line-height: 1.8rem;
+  }
+
+  .appointmentContainer h3 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .reviewsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
+    width: var(--width);
+  }
+
+  .reviewsCard{
+    /* background-color: #2A4061; */
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+    padding: 2rem;
+  }
+  
+
+  .imgContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .imgContainer img{
+    height: 5rem;
+  }
+
+  .imgContainer::after{
+    content: '★★★★★';
+    letter-spacing: -3px;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #1A365D;
+    /* margin-top: .3rem; */
+    position: absolute;
+    bottom: -2rem;
+    
+  }
+
+  .reviewAuthor{
+    margin: 2rem 0 0;
+    font-style: normal;
+
+  }
+
+  .reviewAuthor span{
+    font-weight: 600;
+
+  }
+
+
+} 
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+@media only screen and (min-width: 992px) {
+  
+}
+
+@media only screen and (max-width: 1200px) {
+  
+}
+
+@media only screen and (max-width: 1400px) {
+  
+}
