@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import HeaderCTA from './HeaderCTA'
 
 function Header() {
   return (
@@ -8,10 +9,10 @@ function Header() {
             <Image alt='' className='main-logo' src={'/images/logos/fyzical-white-logo.png'} height={61} width={270}/>
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/services">SERVICES</a>
+                    <a href="/services">services</a>
                     {/* <ul className='submenu'>
                         <li>
                             <a href="#">Physical therapy</a>
@@ -56,6 +57,7 @@ function Header() {
                 </li>
             </ul>
         </div>
+        <HeaderCTA />
     </header>
   )
 }

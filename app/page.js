@@ -152,7 +152,7 @@ export default function Home() {
               <span>
               - Bill Capraro, Founder
               </span>
-              <a className="button button-rounded" href="#">schedule appointment</a>
+              <a className="button button-hover mt-1 button-rounded" href="#">schedule appointment</a>
             </div>
         </div>
         <div>
