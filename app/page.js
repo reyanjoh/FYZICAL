@@ -28,24 +28,28 @@ export default function Home() {
             </div>
             <div className={styles.heroRight}>
               <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
                 <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
 
                 <span>About fyzical copperfield</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
                 <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-blog.jpg"/>
 
                 <span>blog articles</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
                 <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-new-centers.jpg"/>
 
                 <span>centers coming soon</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
                 <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/09/fyzical-chicago-schaumburg-pt-1200x800.jpg"/>
 
                 <span>Direct access</span>

@@ -162,7 +162,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* position: relative; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -171,6 +171,11 @@
 
   .heroNav:hover .heroNavImg{
     scale: 1.08;
+  }
+
+  .heroNav:hover .blueFilter{
+    opacity: 0;
+
   }
 
   .heroNav span{
@@ -189,11 +194,23 @@
     /* object-fit: cover;
     object-position: center; */
     /* position: absolute; */
+    /* background-color: var(--main-color); */
     transition: 1.5s;
-
     top: 0;
     bottom: 0;
     width: 27rem;
+  }
+
+  .blueFilter{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color);
+    z-index: 1;
+    opacity: .4;
+    transition: 1.5s;
   }
 
 
