@@ -107,26 +107,31 @@
     position: relative;
     /* min-width: 37rem; */
     width: 100%;
+    display: flex;
+    align-items: center;
     /* background-color: #1a1a1a; */
+    /* padding-left: 2rem; */
     
   }
 
   .heroCTA{
     background-color: white;
-    height: 12rem;
-    width: 12rem;
+    min-height: 12rem;
+    width: 15rem;
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 2rem;
+    left: 2rem; */
+    margin-left: 2rem;
 
   }
 
   .heroCTA span{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
+    color: #1A365D;
   }
 
   .heroCTA a{
@@ -136,6 +141,9 @@
     border-radius: 10rem;
     text-align: center;
     width: 9rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
   }
   .heroRight{
     display: grid;
@@ -157,13 +165,32 @@
     /* position: relative; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    /* transition: 2s; */
   }
 
-  .heroNav img{
+  .heroNav:hover .heroNavImg{
+    scale: 1.08;
+  }
+
+  .heroNav span{
+    /* background-color: var(--dark-blue); */
+    background-color: rgba(255, 255, 255, 0.405);
+    position: absolute;
+    z-index: 3;
+    color: black;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4rem;
+  }
+
+  .heroNavImg{
     /* object-fit: cover;
     object-position: center; */
     /* position: absolute; */
+    transition: 1.5s;
+
     top: 0;
     bottom: 0;
     width: 27rem;

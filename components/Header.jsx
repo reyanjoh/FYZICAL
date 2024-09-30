@@ -12,8 +12,25 @@ function Header() {
     const[toggleMenu, setToggleMenu] = useState(false);
 
     function handleClick() {
+        // if (toggleMenu === true) {
+        //     <style jsx global>{`
+        //         html, body{
+        //             overflow: hidden;
+        //         }
+        //         `}
+        //     </style>
+        // }else{
+        //     <style jsx global>
+        //         {`
+        //         html, body{
+        //             overflow-y: scroll;
+        //         }
+        //         `}</style>
+        // }
+
         setToggleMenu(!toggleMenu);
-        console.log('clicked')
+        // console.log('clicked')
+        
       }
 
   return (

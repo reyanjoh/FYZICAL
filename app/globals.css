@@ -2,6 +2,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --main-color: #1B8ECD;
+  --dark-blue: #1A365D;
   --width: 100%;
   --gap: 1.5rem;
   --transition: .2s;
@@ -252,6 +253,7 @@ footer li {
   color: white;
   top: 2rem;
   border: 1px solid #639dee;
+ 
 }
 
 .burger-icon-ul{

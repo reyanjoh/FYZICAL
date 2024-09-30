@@ -21,27 +21,34 @@ export default function Home() {
           <h1 className={styles.h1}>FYZICAL THERAPY & BALANCE CENTERS HOUSTON</h1>
             <div className={styles.heroLinksWithImgs}>
               <div className={styles.heroLeft}>
-                <div className={styles.heroCTA}>
-                <span>TATE OF THE ART CLINICS</span>
+                <div className={`${styles.heroCTA} shadow`}>
+                <span>STATE OF<br /> THE ART CLINICS</span>
                 <a href="">LOCATIONS</a>
               </div>
             </div>
             <div className={styles.heroRight}>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+
+                <span>About fyzical copperfield</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-blog.jpg"/>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-blog.jpg"/>
+
+                <span>blog articles</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-new-centers.jpg"/>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-new-centers.jpg"/>
+
+                <span>centers coming soon</span>
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/09/fyzical-chicago-schaumburg-pt-1200x800.jpg"/>
-                dqwdq
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/09/fyzical-chicago-schaumburg-pt-1200x800.jpg"/>
+
+                <span>Direct access</span>
 
               </a>
 
