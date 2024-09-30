@@ -2,7 +2,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --main-color: #1B8ECD;
-  --width: 75rem;
+  --width: 100%;
   --gap: 1.5rem;
   --transition: .2s;
   --color-alert: #eb7725;
@@ -80,6 +80,25 @@ section{
   -webkit-box-shadow: 1px 8px 21px -4px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 8px 21px -4px rgba(0,0,0,0.75);
 }
+
+
+
+
+
+
+
+
+
+.width{
+  width: var(--width);
+  
+}
+
+
+
+
+
+
 
 footer{
   display: flex;
@@ -219,8 +238,186 @@ footer li {
   border-radius: 5rem;
 }
 
+.burger-icon{
+  height: 3rem;
+  width: 3rem;
+  background-color: rebeccapurple;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
+
+.burger-icon-ul{
+  height: 3rem;
+  width: 3rem;
+  background-color: red;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
 
 
+@media only screen and (max-width: 600px) {
+  
+  .header{
+    background-color: var(--main-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: fixed;
+    /* top:0;
+    bottom: 0; */
+    z-index: 10;
+    
+  }
+  .header-container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 100dvh; */
+
+    padding: 1.9rem 0;
+    width: var(--width);
+    /* background-color: #0a0a0a; */
+  }
+  
+  .main-logo{
+      transform: scale(.8);
+      margin-left: -1.6rem;
+  }
+  
+  .header ul{
+
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 80dvw;
+    top: 0;
+    bottom: 0;
+    /* left: 0; */
+    padding-top: 5rem;
+    /* left: -80dvw; */
+    transition: var(--transition);
+
+    background-color: white;
+    
+    /* gap: .5rem; */
+  
+  }
+
+  .header ul::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.287);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -20dvw;
+    width: 20dvw;
+  }
+
+  .nav-hide{
+    left: 0;
+
+  }
+
+  .nav-show{
+    left: -100dvw;
+
+  }
+  
+  .header li{
+    list-style: none;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .05rem;
+    position: relative;
+    /* background-color: #0a0a0a; */
+    width: inherit;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--main-color);
+    /* background-color: #0a0a0a; */
+  }
+
+  .header a{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .header ul li ul{
+    display: none;
+    /* visibility: hidden;
+    display: flex; */
+    background-color: #0a0a0a;
+    flex-direction: column;
+    position: absolute;
+  }
+  
+  .header ul li a:hover .header ul li ul{
+    /* visibility: visible; */
+    display: flex;
+    /* background-color: red; */
+  }
+  
+  .headerCTA{
+    background-color: var(--dark-blue);
+    width: 100%;
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+    /* bottom: -40rem; */
+    /* margin-top: 50rem; */
+    z-index: 10;
+  }
+  .headerCTA div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .headerCTA div div:nth-child(1){
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .headerCTA div div:nth-child(2){
+    display: flex;
+    justify-content: center;
+  }
+  .headerCTA div div:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .headerCTA div div:nth-child(3) a{
+    color: #639dee;
+  }
+  .headerCTA div div{
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+
+
+
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -232,13 +429,19 @@ footer li {
   /* body {
     background-color: lightblue;
   } */
-
-  .width{
-    width: var(--width);
-    
+  :root {
+    --width: 75rem;
+    --gap: 1.5rem;
   }
-  
 
+  
+  .burger-icon{
+    display: none;
+  }
+
+  .burger-icon-ul{
+    display: none;
+  }
 
   
   .header{
@@ -285,6 +488,7 @@ footer li {
   
     /* background-color: #0a0a0a; */
   }
+
   
   
   .header ul li ul{
@@ -309,6 +513,10 @@ footer li {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: fixed;
+    top: 7rem;
+    z-index: 10;
   }
   .headerCTA div{
     display: grid;

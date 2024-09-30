@@ -1,13 +1,33 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
+// import { RxHamburgerMenu } from "react-icons/rx";
 import HeaderCTA from './HeaderCTA'
+import { useState } from "react";
+
 
 function Header() {
+
+    const[toggleMenu, setToggleMenu] = useState(false);
+
+    function handleClick() {
+        setToggleMenu(!toggleMenu);
+        console.log('clicked')
+      }
+
   return (
     <header className='header'>
+        {/* <RxHamburgerMenu /> */}
+
+        <div className='burger-icon' onClick={handleClick}>
+
+        </div>
+
         <div className='header-container'>
             <Image alt='' className='main-logo' src={'/images/logos/fyzical-white-logo.png'} height={61} width={270}/>
-            <ul>
+            <ul className={`${toggleMenu ? 'nav-show' :'nav-hide'}`}>
+                <div className='burger-icon-ul' onClick={handleClick}></div>
                 <li>
                     <a href="/">Home</a>
                 </li>
@@ -57,7 +77,7 @@ function Header() {
                 </li>
             </ul>
         </div>
-        <HeaderCTA />
+        {/* <HeaderCTA /> */}
     </header>
   )
 }

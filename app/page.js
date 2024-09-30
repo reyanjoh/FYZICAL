@@ -2,12 +2,18 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeaderCTA from "@/components/HeaderCTA";
 
 
 export default function Home() {
+
+
+
   return (
     <div className={styles.page}>
       <Header />
+      <HeaderCTA />
+
       <main className={`${styles.main}`}>
         
        <section className={`${styles.hero} ${styles.padding}`}>
