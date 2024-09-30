@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const runtime = 'edge';
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -175,7 +177,7 @@ export default function Home() {
             <span>Roger S</span> / Garfield Ridge
             </p>
           </div>
-          
+
           <div className={`${styles.reviewsCard} shadow-small shadow-hover`}>
             <div className={styles.imgContainer}>
               <img src="https://fyzicalchicago.com/wp-content/uploads/2020/09/fyzman-fyzical-pbc.png"/>
