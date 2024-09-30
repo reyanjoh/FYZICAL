@@ -1,11 +1,16 @@
+import Header from '@/components/Header';
 import React from 'react'
-
-export const runtime = 'edge';
 
 
 function page() {
   return (
-    <div>services</div>
+    <div>
+      <Header />
+
+        <main>
+
+        </main>
+    </div>
   )
 }
 

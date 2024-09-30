@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export const runtime = 'edge';
 
 export default function Home() {
   return (
@@ -27,15 +26,15 @@ export default function Home() {
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-blog.jpg"/>
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-new-centers.jpg"/>
 
               </a>
               <a href="#" className={styles.heroNav}>
-                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+                <img src="https://fyzicalchicago.com/wp-content/uploads/2022/09/fyzical-chicago-schaumburg-pt-1200x800.jpg"/>
                 dqwdq
 
               </a>
