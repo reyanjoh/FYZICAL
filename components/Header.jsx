@@ -26,7 +26,7 @@ function Header() {
 
         <div className='header-container'>
             <Image alt='' className='main-logo' src={'/images/logos/fyzical-white-logo.png'} height={61} width={270}/>
-            <ul className={`${toggleMenu ? 'nav-show' :'nav-hide'}`}>
+            <ul className={`${toggleMenu ? 'nav-hide' :'nav-show'}`}>
                 <div className='burger-icon-ul' onClick={handleClick}></div>
                 <li>
                     <a href="/">Home</a>
