@@ -73,7 +73,7 @@ function Header() {
                     </ul> */}
                 </li>
                 <li>
-                    Blog
+                    <a href="/blog">Blog</a>
                 </li>
                 <li>
                     Staff
