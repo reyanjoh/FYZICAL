@@ -14,7 +14,7 @@ function page() {
             <section className={styles.hero}>
                 <div className={`${styles.heroContent} width`}>
                     <div className={styles.left}>
-                      <a href="#" className={styles.heroCard}>
+                      <a href="/blog/blogg" className={styles.heroCard}>
                         <div className={styles.heroCardCover}>
                           <img src="https://img.freepik.com/free-photo/patient-doing-physical-rehabilitation-helped-by-therapists_23-2149227880.jpg?w=740&t=st=1727817406~exp=1727818006~hmac=c375f7c9ea12ce0bdeacd3bedfd4e7a9e68b88d074110e4952e043ec0ecd973d" alt="" />
 
@@ -99,14 +99,50 @@ function page() {
                             </p>
                           </div>
                         </a>
-                      
-
-                        
                     </div>
-
                 </div>
+                <div className={`${styles.allBlogs} width`}>
+                  {(() => {
 
+                    const blogs = [];
+                    for (let i = 0; i < 10; i++) {
+
+                      blogs.push(
+
+                        <a href="/blog/blogg" className={`${styles.allBlogsCard}`}>
+                          <div className={styles.allBlogsCardCover}>
+                            <img src="https://img.freepik.com/free-photo/patient-doing-physical-rehabilitation-helped-by-therapists_23-2149227880.jpg?w=740&t=st=1727817406~exp=1727818006~hmac=c375f7c9ea12ce0bdeacd3bedfd4e7a9e68b88d074110e4952e043ec0ecd973d" alt="" />
+
+                          </div>
+                          <div className={styles.allBlogsCardContent}>
+                            
+                            <span>
+                              Author • 20 Jan 2024
+                            </span>
+
+                            <h3>
+                              Conversations with Fyzical Therapist
+                            </h3>
+
+                            <p>
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut accusantium aut non adipisci nostrum, animi reiciendis sint minus. Laudantium, voluptates?
+                            </p>
+                          </div>
+                        </a>
+                      )
+                      
+                    }
+                    return blogs
+                  })()}
+                  
+                        
+
+              </div>
             </section>
+
+            {/* <section className={styles.allBlogsSection}>
+              
+            </section> */}
 
 
         </main>
