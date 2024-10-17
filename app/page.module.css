@@ -57,7 +57,7 @@
     top: 50%;
     left: -32%;
     /* color: red; */
-    background-color: #E4E6EC;
+    background-color: var(--border-light-gray);
     width: 30%;
     height: 2px;
 
@@ -68,7 +68,7 @@
     top: 50%;
     right: -32%;
     /* color: red; */
-    background-color: #E4E6EC;
+    background-color: var(--border-light-gray);
     width: 30%;
     height: 2px;
 

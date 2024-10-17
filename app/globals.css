@@ -1,14 +1,20 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --main-color: #1B8ECD;
-  --dark-blue: #1A365D;
-  --width: 100%;
-  --gap: 1.5rem;
-  --transition: .2s;
-  --color-alert: #eb7725;
-  --color-alert-hover: #BC5F1E;
-  --dark-blue: #1A365D
+  --background:         #ffffff;
+  --foreground:         #171717;
+  --main-color:         #1B8ECD;
+  --dark-blue:          #1A365D;
+  --color-alert:        #eb7725;
+  --color-alert-hover:  #BC5F1E;
+  --dark-blue:          #1A365D;
+  --border-light-gray:  #E4E6EC;
+
+
+  --width:          100%;
+  --min-height:     20rem;
+  --width-fixed:    20rem;
+  --gap:            1.5rem;
+  --transition:     .2s;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,7 +58,7 @@ a {
 section{
   width: 100%;
   /* background-color: #74ceff; */
-  min-height: 20rem;
+  min-height: var(--min-height);
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
@@ -223,6 +229,15 @@ footer li {
 
 .ml-2{
   margin-left: 2rem;
+}
+
+.center-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
 }
 
 
