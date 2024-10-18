@@ -14,6 +14,9 @@
   --width-fixed:    20rem;
   --gap:            1.5rem;
   --transition:     .2s;
+  --transition-slow:.5s;
+
+  --line-height:    1.5rem;
 
 }
 
@@ -450,6 +453,8 @@ footer li {
     color: white;
   }
 
+  
+
 
 
 
@@ -580,6 +585,11 @@ footer li {
     display: flex;
     align-items: center;
     color: white;
+  }
+  .grid-3-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
   }
 }
 
