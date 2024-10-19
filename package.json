@@ -7,19 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
-    "mongodb": "^6.9.0",
-    "mongoose": "^8.6.3",
-    "next": "14.2.13",
+    "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18",
-    "typescript": "^5.6.2"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.3",
+    "@cloudflare/next-on-pages": "^1.13.5",
+    "@cloudflare/workers-types": "^4.20241018.0",
     "eslint": "^8",
-    "eslint-config-next": "14.2.13"
+    "eslint-config-next": "14.2.5",
+    "eslint-plugin-next-on-pages": "^1.13.5",
+    "vercel": "^37.11.0",
+    "wrangler": "^3.81.0"
   }
 }

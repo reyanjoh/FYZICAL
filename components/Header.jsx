@@ -51,7 +51,6 @@ function Header() {
             <Image alt='' priority className='main-logo' src={'/images/logos/fyzical-white-logo.png'} height={61} width={270}/>
             <ul className={`${toggleMenu ? 'nav-hide' :'nav-show'}`}>
                 <div className='burger-icon-ul' onClick={handleClick}> ✖ </div>
-<<<<<<< HEAD
 
                 {/* {console.log(pathName)} */}
 
@@ -93,55 +92,6 @@ function Header() {
                     );
                 })}
                 
-=======
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/services">services</a>
-                    {/* <ul className='submenu'>
-                        <li>
-                            <a href="#">Physical therapy</a>
-                        </li>
-                    </ul> */}
-                </li>
-                <li>
-                    <a href="#">Patient Resources</a>
-                    {/* <ul className='submenu'>
-                        <li>
-                            Insurance plans <br/> & Networks
-                        </li>
-                    </ul> */}
-                </li>
-                <li>
-                    Locations
-                    {/* <ul className='submenu'>
-                        <li>
-                            Copperfeild
-                        </li>
-                    </ul> */}
-                </li>
-                <li>
-                    Blog
-                </li>
-                <li>
-                    Staff
-                    {/* <ul className='submenu'>
-                        <li>
-                            Staff 1
-                        </li>
-                        <li>
-                            Staff 2
-                        </li>
-                    </ul> */}
-                </li>
-                <li>
-                    About Us
-                </li>
-                <li>
-                    careers
-                </li>
->>>>>>> parent of 7c90a06 (added blog hero)
             </ul>
         </div>
         {/* <HeaderCTA /> */}
