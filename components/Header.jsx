@@ -59,7 +59,7 @@ function Header() {
                     const isActive = pathName.endsWith(link.href) 
                     // {console.log(isActive)}
 
-                    // {console.log(pathName)}
+                    {console.log(pathName)}
 
                     // ((()=>{
                     //   if (pathName != '/') {
