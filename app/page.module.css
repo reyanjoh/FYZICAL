@@ -1,408 +1,230 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  /* display: grid; */
-  /* grid-template-rows: 20px 1fr 20px; */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  /* padding: 80px; */
-  /* gap: 64px; */
-  font-family: var(--font-geist-sans);
+  padding: 6rem;
+  min-height: 100vh;
 }
 
-
-/* .main{
-  margin-top: 10rem;
-
-} */
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
 }
 
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 
+.description p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
 
-.h1{
-  font-size: 1.8rem;
-  margin: 2rem 0;
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}
+
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.center::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.center::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.center::before,
+.center::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.logo {
   position: relative;
 }
-
-@media only screen and (min-width: 600px) {
-  .main{
-    padding: 10rem 0;
-  }
-  
-  .h1{
-    font-size: 1.8rem;
-    margin: 2rem 0;
-    position: relative;
-  }
-  .h1::before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -32%;
-    /* color: red; */
-    background-color: var(--border-light-gray);
-    width: 30%;
-    height: 2px;
-
-  }
-  .h1::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -32%;
-    /* color: red; */
-    background-color: var(--border-light-gray);
-    width: 30%;
-    height: 2px;
-
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
 
-  .hero{
-    /* padding: 0 4rem; */
-    background-image: url('../public/images/backgrounds/fyzman-bg-01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-color: bisque; */
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
   }
 
-  .heroContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .heroLinksWithImgs{
-    display: flex;
-    gap: var(--gap);
-    /* background-color: aqua; */
-    width: 100%;
-  }
-
-  .heroLeft{
-    background-image: url('https://fyzicalchicago.com/wp-content/uploads/2021/07/fyzical-lincoln-park-front-desk-1193x800.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 1/1;
-
-    position: relative;
-    /* min-width: 37rem; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /* background-color: #1a1a1a; */
-    /* padding-left: 2rem; */
-    
-  }
-
-  .heroCTA{
-    background-color: white;
-    min-height: 12rem;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    /* position: absolute;
-    top: 50%;
-    left: 2rem; */
-    margin-left: 2rem;
-
-  }
-
-  .heroCTA span{
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1A365D;
-  }
-
-  .heroCTA a{
-    background-color: var(--main-color);
-    color: white;
-    padding: .5rem .8rem;
-    border-radius: 10rem;
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
     text-align: center;
-    width: 9rem;
-    margin-top: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
-  .heroRight{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    aspect-ratio: 1/1;
-    /* min-width: 37rem; */
-    width: 100%;
-    /* background-color: rebeccapurple; */
-    /* flex-wrap: wrap; */
-    gap: var(--gap);
   }
 
-  .heroNav{
-    background-color: rgb(140, 131, 148);
-    /* aspect-ratio: 1.1; */
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
     align-items: flex-end;
-    /* transition: 2s; */
-  }
-
-  .heroNav:hover .heroNavImg{
-    scale: 1.08;
-  }
-
-  .heroNav:hover .blueFilter{
-    opacity: 0;
-
-  }
-
-  .heroNav span{
-    /* background-color: var(--dark-blue); */
-    background-color: rgba(255, 255, 255, 0.405);
-    position: absolute;
-    z-index: 3;
-    color: black;
-    padding: .8rem 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 4rem;
-  }
-
-  .heroNavImg{
-    /* object-fit: cover;
-    object-position: center; */
-    /* position: absolute; */
-    /* background-color: var(--main-color); */
-    transition: 1.5s;
-    top: 0;
-    bottom: 0;
-    width: 27rem;
-  }
-
-  .blueFilter{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--main-color);
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
     z-index: 1;
-    opacity: .4;
-    transition: 1.5s;
   }
-
-
-  .services{
-    background-image: url('../public/images/backgrounds/fyzical-bg-2-01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .servicesCards{
-    display: grid;
-    gap: var(--gap);
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* width: 100%; */
-    min-height: 40rem;
-    /* background-color: #1a1a1a; */
-  }
-
-  .servicesCard{
-    background-color: rgb(255, 255, 255);
-    border-radius: .2rem;
-    display: flex;
-    flex-direction: column;
-    
-    
-  }
-
-  
-
-  .servicesCard:hover .servicesCardHeader h4::after{
-    width: 100%;
-    background-color: #8f8f8f;
-
-  }
-
-  .servicesCardHeader{
-    display: flex;
-    flex-direction: column;
-    /* background-color: #ccc; */
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    /* justify-content: center; */
-  }
-  .servicesCardHeader img{
-    width: 5.5rem;
-  }
-
-  .servicesCardHeader h4{
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: #383838;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border-bottom: 2px solid #b7b7b7; */
-  }
-  .servicesCardHeader h4::after{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 7rem;
-    background-color: #c1c1c1;
-    bottom: -.6rem;
-    transition: var(--transition);
-    /* left: 0;
-    right: 0; */
-
-  }
-
-  .servicesCardBody{
-    /* background-color: #383838; */
-    padding: 0 1rem;
-    text-align: center;
-    /* display: flex; */
-  }
-
-  .servicesCardBody p{
-    font-size: .95rem;
-    color: #515151;
-
-  }
-
-  .appointment{
-    background-image: url('https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicago-physical-therapy-1200x800.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 33rem;
-    display: flex;
-    flex-direction: row;
-    /* position: relative; */
-  }
-
-  .appointment > div{
-    /* background-color: rgb(167, 149, 185); */
-    width: calc(var(--width)/2);
-    min-height: 10rem;
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-  
-  }
-
-  .appointmentContainer{
-    background-color: #2A4061;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-    width: 25rem;
-    color: white;
-    line-height: 1.8rem;
-  }
-
-  .appointmentContainer h3 {
-    font-size: 2.1rem;
-    margin-bottom: 2rem;
-  }
-
-  .reviewsContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--gap);
-    width: var(--width);
-  }
-
-  .reviewsCard{
-    /* background-color: #2A4061; */
-    min-height: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-style: italic;
-    padding: 2rem;
-  }
-  
-
-  .imgContainer{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-  .imgContainer img{
-    height: 5rem;
-  }
-
-  .imgContainer::after{
-    content: '★★★★★';
-    letter-spacing: -3px;
-    font-style: normal;
-    font-size: 1.5rem;
-    color: #1A365D;
-    /* margin-top: .3rem; */
-    position: absolute;
-    bottom: -2rem;
-    
-  }
-
-  .reviewAuthor{
-    margin: 2rem 0 0;
-    font-style: normal;
-
-  }
-
-  .reviewAuthor span{
-    font-weight: 600;
-
-  }
-
-
-} 
-
-@media only screen and (min-width: 768px) {
-  
 }
 
-@media only screen and (min-width: 992px) {
-  
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
 }
 
-@media only screen and (max-width: 1200px) {
-  
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
 }
 
-@media only screen and (max-width: 1400px) {
-  
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
