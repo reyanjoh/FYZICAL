@@ -1,95 +1,234 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeaderCTA from "@/components/HeaderCTA";
+
 
 export default function Home() {
+
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.page}>
+      <Header />
+      <HeaderCTA />
+
+      <main className={`${styles.main}`}>
+        
+       <section className={`${styles.hero} ${styles.padding}`}>
+        <div className={`width ${styles.heroContent}`}>
+          <h1 className={styles.h1}>FYZICAL THERAPY & BALANCE CENTERS HOUSTON</h1>
+            <div className={styles.heroLinksWithImgs}>
+              <div className={styles.heroLeft}>
+                <div className={`${styles.heroCTA} shadow`}>
+                <span>STATE OF<br /> THE ART CLINICS</span>
+                <a href="">LOCATIONS</a>
+              </div>
+            </div>
+            <div className={styles.heroRight}>
+              <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/about-fyzical-chicago-2.jpg"/>
+
+                <span>About fyzical copperfield</span>
+
+              </a>
+              <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-blog.jpg"/>
+
+                <span>blog articles</span>
+
+              </a>
+              <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/01/fyzical-chicago-new-centers.jpg"/>
+
+                <span>centers coming soon</span>
+
+              </a>
+              <a href="#" className={styles.heroNav}>
+                <div className={styles.blueFilter}></div>
+                <img className={styles.heroNavImg} src="https://fyzicalchicago.com/wp-content/uploads/2022/09/fyzical-chicago-schaumburg-pt-1200x800.jpg"/>
+
+                <span>Direct access</span>
+
+              </a>
+
+            </div>
+          </div>
         </div>
-      </div>
+       </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+       <section className={styles.services}>
+        <div className={`width ${styles.servicesCards}`}>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-balance-vestibular.png"/>
+              <h4>Balance therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Does your balance or fear of falling strain your everyday life? At FYZICAL we will help you master the tools to live a well-balanced life.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-orthopedic.png"/>
+              <h4>orthopedic therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Do you hurt? Is your motion limited? Learn how our trained professionals can help you conquer your pain, restore your motion, increase your strength, and regain your active lifestyle.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/09/fyzical-chicagoland-advanced-balance.png"/>
+              <h4>advanced Technologies</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Unlike other physical therapy companies, FYZICAL offers cutting-edge technologies to assess, treat, and help you get better faster!
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/09/fyzical-chicagoland-workers-comp.png"/>
+              <h4>workers compensation</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Were you or someone you know injured on the job? Our experts will guide your care and help you get back on the job.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-aquatics.png"/>
+              <h4>aquatic therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Jump in to see how aquatic therapy is an effective, safe, and trustworthy environment for strength and rehabilitation.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-aquatics.png"/>
+              <h4>aquatic therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Jump in to see how aquatic therapy is an effective, safe, and trustworthy environment for strength and rehabilitation.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-aquatics.png"/>
+              <h4>aquatic therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Jump in to see how aquatic therapy is an effective, safe, and trustworthy environment for strength and rehabilitation.
+              </p>
+            </div>
+          </a>
+          <a href="#" className={`${styles.servicesCard} shadow-hover`}>
+            <div className={styles.servicesCardHeader}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2021/08/fyzical-chicagoland-aquatics.png"/>
+              <h4>aquatic therapy</h4>
+            </div>
+            <div className={styles.servicesCardBody}>
+              <p>
+                Jump in to see how aquatic therapy is an effective, safe, and trustworthy environment for strength and rehabilitation.
+              </p>
+            </div>
+          </a>
+          
+        </div>
+        
+       </section>
+       <section className={styles.appointment}>
+        <div>
+            <div className={`${styles.appointmentContainer} shadow`}>
+              <h3>
+                LOVE YOUR LIFE
+              </h3>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+              <p>
+                “Physical therapy creates healthy bodies for better living, it is the embodiment of both wellness and preventative care. The window for innovation in the next twenty years in healthcare is going to be truly transformative.”
+              </p>
+              <span>
+              - Bill Capraro, Founder
+              </span>
+              <a className="button button-hover mt-1 button-rounded" href="#">schedule appointment</a>
+            </div>
+        </div>
+        <div>
+          
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+       </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+       <section className={styles.reviews}>
+        <div className={styles.reviewsContainer}>
+          <div className={`${styles.reviewsCard} shadow-small shadow-hover`}>
+            <div className={styles.imgContainer}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2020/09/fyzman-fyzical-pbc.png"/>
+            </div>
+
+            <p>
+              I am amazed on how different this clinic is from all the other clinics I have been to (Athletico and ATI) they offer one    on one care for the full treatment session you are there; they have aquatic therapy! Can`t find that anywhere else in the area!! They also help me with my balance when they used this device that hooks up to the ceiling and will not let you fall if you stumble, I felt safe and secure using this equipment and always having the therapist on my side. Will recommend this facility to all my family and friends.
+            </p>
+
+            <p className={styles.reviewAuthor}>
+            <span>Roger S</span> / Garfield Ridge
+            </p>
+          </div>
+
+          <div className={`${styles.reviewsCard} shadow-small shadow-hover`}>
+            <div className={styles.imgContainer}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2020/09/fyzman-fyzical-pbc.png"/>
+            </div>
+
+            <p>
+              Justin Young is a terrific physical therapist. He is both professional and personable. After our introductory meeting Justin identified the causes of my leg and knee pain and created a treatment plan that we followed for two months. He explained the exercises that we did together and prescribed at home routines. After completion of my therapeutic treatment plan, I experienced little or no pain and I am able to engage in vigorous hiking and biking. Thank you, Justin!
+            </p>
+
+            <p className={styles.reviewAuthor}>
+            <span>Tom F</span> /  Lincoln Park
+            </p>
+          </div>
+
+          <div className={`${styles.reviewsCard} shadow-small shadow-hover`}>
+            <div className={styles.imgContainer}>
+              <img src="https://fyzicalchicago.com/wp-content/uploads/2020/09/fyzman-fyzical-pbc.png"/>
+            </div>
+
+            <p>
+              As someone who has navigated the maze of rehabilitation centers, FYZICAL Therapy & Balance Centers stands out as a beacon of professionalism fused with a welcoming atmosphere. From the outset, it was clear that this wasn`t just a clinic; it was a place where expertise and friendliness converged seamlessly. If you`re seeking a professional yet personable environment for your rehabilitation journey, look no further. FYZICAL Therapy & Balance Centers has set the bar high, proving that exceptional care and a friendly demeanor can coexist seamlessly in the world of physical therapy.
+            </p>
+
+            <p className={styles.reviewAuthor}>
+            <span>Allan B</span> / Garfield Ridge
+            </p>
+          </div>
+
+        </div>
+       
+       </section>
+      </main>
+
+      <Footer />
+      
+    </div>
   );
 }
