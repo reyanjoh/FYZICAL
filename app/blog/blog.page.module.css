@@ -8,7 +8,6 @@
 
     .hero{
         /* background-color: cadetblue; */
-        gap: var(--gap);
     }
 
     .heroContent{
@@ -80,19 +79,11 @@
     .heroCardContent h3{
         margin: 1rem 0 .5rem;
         transition: var(--transition);
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
     .heroCardContent p{
         /* margin: 1rem 0 .5rem; */
         color: #141414;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
 
@@ -170,88 +161,10 @@
     .heroRightCardContent h3{
         margin: .5rem 0 .3rem;
         font-size: 1.1rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
     .heroRightCardContent p{
         font-size: .9rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .allBlogsSection{
-        /* background-color: #141414; */
-    }
-
-    .allBlogs{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--gap);
-    }
-
-    .allBlogsCard{
-        display: flex;
-        flex-direction: column;
-        /* background-color: rebeccapurple; */
-        /* width: 100%; */
-        /* background-color: rebeccapurple; */
-    }
-
-    .allBlogsCard:hover .allBlogsCardCover img{
-        transform: scale(1.03);
-
-    }
-
-    .allBlogsCard:hover .allBlogsCardContent h3{
-        color: var(--dark-blue);
-
-    }
-
-    .allBlogsCardCover{
-        position: relative;
-        overflow: hidden;
-        /* aspect-ratio: 3/2; */
-        height: 15rem;
-        /* background-color: red; */
-        /* width: 100%; */
-    }
-
-    .allBlogsCardCover img{
-        position: absolute;
-        height: 16rem;
-        transition: var(--transition);
-    }
-
-    .allBlogsCardContent{
-        padding: 1rem 0 ;
-        /* background-color: #4088ac; */
-    }
-
-    .allBlogsCardContent span{
-        font-size: .8rem;
-        color: #595959;
-    }
-
-    .allBlogsCardContent h3{
-        margin: .5rem 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .allBlogsCardContent p{
-        /* margin: .5rem 0; */
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
     }
 
 }

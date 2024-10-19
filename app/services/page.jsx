@@ -2,7 +2,6 @@ import Header from '@/components/Header';
 import React from 'react'
 import styles from "./services.page.module.css";
 import Footer from '@/components/Footer';
-import HeaderCTA from '@/components/HeaderCTA';
 
 
 
@@ -10,7 +9,6 @@ function page() {
   return (
     <div>
       <Header />
-      <HeaderCTA />
 
         <main>
             <section className={`${styles.hero} ${styles.padding}`}>
