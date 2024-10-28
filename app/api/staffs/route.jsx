@@ -2,6 +2,7 @@ import Staff from "@/lib/models/staff"
 // import { connect } from "mongoose"
 import {connect} from '@/lib/db'
 import { NextResponse } from "next/server"
+export const dynamic = 'force-dynamic'
 
 export const GET = async () =>{
 

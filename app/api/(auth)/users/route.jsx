@@ -1,6 +1,8 @@
 import User from "@/lib/models/users"
 import {connect} from '@/lib/db'
 import { NextResponse } from "next/server"
+export const dynamic = 'force-dynamic'
+
 
 export const GET = async () =>{
 
