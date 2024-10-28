@@ -2,7 +2,7 @@ import Blog from "@/lib/models/blog"
 // import { connect } from "mongoose"
 import {connect} from '@/lib/db'
 import { NextResponse } from "next/server"
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 
 export const GET = async () =>{
