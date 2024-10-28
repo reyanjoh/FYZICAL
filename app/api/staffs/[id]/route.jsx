@@ -1,5 +1,6 @@
 import Staff from "@/lib/models/staff"
 // import { connect } from "mongoose"
+export const dynamic = 'force-dynamic'
 import {connect} from '@/lib/db'
 import { NextResponse } from "next/server"
 
